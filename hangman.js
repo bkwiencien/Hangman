@@ -1,5 +1,7 @@
 var myWord="water";
 var array = ["w","a","t","e","r"];
+var newarray [];
+var newyWord"";
 var word "water";
 var done=false;
 var letterguesedraw = " ";
