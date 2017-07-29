@@ -1,4 +1,10 @@
-#puzzle{
-  font-size: 500px;
+hr{
+  border: none;
+  border-top: 1px;
+  color: #fff;
+  width: 100%;
+  height: 2px;
+  width: 50%;
 }
+
 
