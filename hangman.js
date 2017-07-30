@@ -20,12 +20,7 @@ function getData() {
    if (len > 1) {
      letterGuessedRaw = letterGuessedRaw.charAt(0);
      letterGuessed = letterGuessedRaw.toLowerCase();
-     console.log("in if you guessed " + letterGuessed);
-     console.log("in if you guessed raw " + letterGuessedRaw);
-
-     
    }
-  console.log("you guessed " + letterGuessed);
    done = true;
 }
 }
