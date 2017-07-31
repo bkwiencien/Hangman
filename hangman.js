@@ -5,6 +5,7 @@ var word = "water";
 var done=false;
 var lertterGuessedRaw = " ";
 var letterGuessedRaw = " ";
+var alreadyGuessed = " ";
 var sofar = "     ";
 var initialString = "__ __ __ __ __";
 var firstLetter = "  __ __ __ __"
@@ -19,8 +20,12 @@ function getData() {
    console.log("len = " + len);
    if (len > 1) {
      letterGuessedRaw = letterGuessedRaw.charAt(0);
-     letterGuessed = letterGuessedRaw.toLowerCase();
    }
+     letterGuessed = letterGuessedRaw.toLowerCase();
+     alreadyGuessed = alreadyGuessed + letterGuessed;
+     console.log("alreadyGuessed = " + alreadyGuessed);
+     var element  = document.getElementById("guessesline");
+     element.innerHTML = "Guesses so far " + alreadyGuessed;
    done = true;
 }
 }
