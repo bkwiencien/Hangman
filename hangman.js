@@ -39,7 +39,10 @@ function getData() {
      }
      var element  = document.getElementById("guessesline");
      element.innerHTML = "Guesses so far " + alreadyGuessed;
+     console.log("numberOfGUesses = " + numberOfGuesses);
      if (numberOfGuesses >9) {
+       element10  = document.getElementById("resulto");
+       element10.innerHTML = "you're done";
        done = true;
      }
 }
