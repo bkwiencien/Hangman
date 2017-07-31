@@ -1,7 +1,7 @@
 var myWord="water";
 array = ["w","a","t","e","r"];
 var newyWord = "";
-var guessedArray = ["__ ","__ ","__ ","__ ","__ ","__ "];
+var guessedArray = ["__ ","__ ","__ ","__ ","__ "];
 var word = "water";
 var done=false;
 var lertterGuessedRaw = " ";
@@ -16,6 +16,7 @@ var numberOfGuesses = 0;
 var searchStatus = 0;
 function getData() {
  if (!done) {
+  console.log("at the top guessedArray = " + guessedArray);
   var input=document.getElementById("userinput")
    letterGuessedRaw = input.value;
    console.log(letterGuessedRaw);
@@ -59,7 +60,7 @@ function searchFor(thisLetter) {
 }
 function updateCurrentLine(letter,ind) {
   guessedArray[ind] = letter;
-  console.log(guessedArray);
+  console.log("guessedArray = " +guessedArray);
   var element5 = document.getElementById("lineo");
   element5.innerHTML = guessedArray.toString();
 }
