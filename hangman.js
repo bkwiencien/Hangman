@@ -38,7 +38,7 @@ function getData() {
         console.log("i am in the right place");
         console.log("element2 = " + element2);
         element2.innerHTML = "success";
-        //updateCurrentLine(letterGuessed,searchStatus);
+        updateCurrentLine(letterGuessed,searchStatus);
      }
      console.log("alreadyGuessed = " + alreadyGuessed);
      var element  = document.getElementById("guessesline");
@@ -58,5 +58,8 @@ function searchFor(thisLetter) {
  return (notFound); 
 }
 function updateCurrentLine(letter,ind) {
+  guessedArray[ind] = letter;
+  guessedArray[ind+1] = " ";
+  console.log(guessedArray);
 }
 
