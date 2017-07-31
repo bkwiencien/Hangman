@@ -61,5 +61,7 @@ function updateCurrentLine(letter,ind) {
   guessedArray[ind] = letter;
   guessedArray[ind+1] = " ";
   console.log(guessedArray);
+  var element5 = document.getElementById("lineo");
+  element5.innerHTML = guessedArray.toString();
 }
 
