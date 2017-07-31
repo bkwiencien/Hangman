@@ -16,13 +16,10 @@ var numberOfGuesses = 0;
 var searchStatus = 0;
 function getData() {
  if (!done) {
-  console.log("at the top guessedArray = " + guessedArray);
   var input=document.getElementById("userinput")
    letterGuessedRaw = input.value;
-   console.log(letterGuessedRaw);
    len = letterGuessedRaw.length;
    letterGuessed = letterGuessedRaw.toLowerCase();
-   console.log("len = " + len);
    if (len > 1) {
      letterGuessedRaw = letterGuessedRaw.charAt(0);
    }
@@ -36,12 +33,10 @@ function getData() {
      } 
      if (searchStatus > -1) {
         var element2 = document.getElementById("resulto");
-        console.log("i am in the right place");
         console.log("element2 = " + element2);
         element2.innerHTML = "success";
         updateCurrentLine(letterGuessed,searchStatus);
      }
-     console.log("alreadyGuessed = " + alreadyGuessed);
      var element  = document.getElementById("guessesline");
      element.innerHTML = "Guesses so far " + alreadyGuessed;
      if (numberOfGuesses >9) {
@@ -51,7 +46,6 @@ function getData() {
 }
 function searchFor(thisLetter) {
  var indexo = "water".search(thisLetter);
- console.log("indexo = " + indexo);
  var notFound = -1;
  if (indexo >= 0) {
    return(indexo);
@@ -60,7 +54,6 @@ function searchFor(thisLetter) {
 }
 function updateCurrentLine(letter,ind) {
   guessedArray[ind] = letter;
-  console.log("guessedArray = " +guessedArray);
   var element5 = document.getElementById("lineo");
   element5.innerHTML = guessedArray.toString();
 }
