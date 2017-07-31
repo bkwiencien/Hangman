@@ -10,8 +10,9 @@ var sofar = "     ";
 var initialString = "__ __ __ __ __";
 var firstLetter = "  __ __ __ __"
 var secondLetter = " __  __ __ __";
+var numberOfGuesses = 0;
 function getData() {
- while (!done) {
+ if (!done) {
   var input=document.getElementById("userinput")
    letterGuessedRaw = input.value;
    console.log(letterGuessedRaw);
@@ -23,10 +24,13 @@ function getData() {
    }
      letterGuessed = letterGuessedRaw.toLowerCase();
      alreadyGuessed = alreadyGuessed + letterGuessed;
+     numberOfGuesses++;
      console.log("alreadyGuessed = " + alreadyGuessed);
      var element  = document.getElementById("guessesline");
      element.innerHTML = "Guesses so far " + alreadyGuessed;
-   done = true;
+     if (numberOfGuesses >9) {
+       done = true;
+     }
 }
 }
 
