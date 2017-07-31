@@ -1,6 +1,7 @@
 var myWord="water";
 array = ["w","a","t","e","r"];
 var newyWord = "";
+var guessedArray = ["__ ","__ ","__ ","__ ","__ ","__ "];
 var word = "water";
 var done=false;
 var lertterGuessedRaw = " ";
@@ -37,6 +38,7 @@ function getData() {
         console.log("i am in the right place");
         console.log("element2 = " + element2);
         element2.innerHTML = "success";
+        //updateCurrentLine(letterGuessed,searchStatus);
      }
      console.log("alreadyGuessed = " + alreadyGuessed);
      var element  = document.getElementById("guessesline");
@@ -54,5 +56,7 @@ function searchFor(thisLetter) {
    return(indexo);
  }
  return (notFound); 
+}
+function updateCurrentLine(letter,ind) {
 }
 
